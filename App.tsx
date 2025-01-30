@@ -6,15 +6,11 @@ import { StyleSheet, Text } from "react-native";
 import AllPlaces from "./screens/AllPlaces";
 import AddPlace from "./screens/AddPlace";
 import { Colors } from "./constant/Styles";
-import {
-  GestureHandlerRootView,
-  // TouchableOpacity,
-} from "react-native-gesture-handler";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import MapDisplay from "./screens/Map";
 import { runDatabaseOperations } from "./utils/database";
 import PlaceDetails from "./screens/PlaceDetails";
-import 'dotenv/config';
-
+import "dotenv/config";
 
 export type RootStackParamList = {
   AllPlaces: undefined;
@@ -59,8 +55,6 @@ const App = () => {
               name="AllPlaces"
               component={AllPlaces}
               options={({ navigation }) => ({
-                // title: "Favorite Places",
-                // headerTitle: "",
                 headerShown: false,
                 // headerRight: () => (
                 //   <TouchableOpacity

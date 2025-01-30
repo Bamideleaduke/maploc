@@ -117,6 +117,7 @@ export async function runDatabaseOperations() {
   await createTable(db);
   // await checkTableSchema(db);
   // console.log("create table db", db);
+  
   const newPlace = {
     id: 123,
     title: "New Place",
@@ -128,28 +129,3 @@ export async function runDatabaseOperations() {
   // await insertPlace(db, newPlace);
 }
 
-// export function init() {
-//   const promise = new Promise((resolve, reject) => {
-//     database.execAsync((tx) => {
-//       tx.executeSql(
-//         `CREATE TABLE IF NOT EXISTS places (
-//             id INTEGER PRIMARY KEY NOT NULL,
-//             title TEXT NOT NULL,
-//             imageUri TEXT NOT NULL,
-//             address TEXT NOT NULL,
-//             lat REAL NOT NULL,
-//             lng REAL NOT NULL
-//           )`,
-//         [],
-//         () => {
-//           tx.resolve();
-//         },
-//         (_, error) => {
-//           tx.reject(error);
-//         }
-//       );
-//     });
-//   });
-
-//   return promise;
-// }
